@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Mounitha's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="highlights.html">Highlights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Gallery</h2>
+        <div class="photo-gallery">
+            <img src="images/photo1.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="images/photo2.jpg" alt="Photo 2" onclick="openLightbox(this)">
+            <img src="images/photo3.jpg" alt="Photo 3" onclick="openLightbox(this)">
+            <img src="images/photo4.jpg" alt="Photo 4" onclick="openLightbox(this)">
+            <img src="images/photo5.jpg" alt="Photo 6" onclick="openLightbox(this)">
+            <img src="images/photo6.jpg" alt="Photo 7" onclick="openLightbox(this)">
+            <img src="images/photo7.jpg" alt="Photo 8" onclick="openLightbox(this)">
+            <img src="images/photo8.jpg" alt="Photo 8" onclick="openLightbox(this)">
+            <img src="images/photo9.jpg" alt="Photo 9" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged Image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
