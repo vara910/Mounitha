@@ -5,9 +5,11 @@ body, h1, h2, p, nav ul {
 }
 
 body {
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
     font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
+    position: relative;
 }
 
 nav ul {
@@ -37,12 +39,22 @@ section {
     text-align: center;
 }
 
-.photo-gallery img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin: 5px;
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
 }
 
 /* Lightbox Styles */
@@ -73,33 +85,6 @@ section {
     color: white;
     cursor: pointer;
 }
-
-/* Add animations if needed */
-.fade-in {
-    animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-body {
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-body {
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    position: relative;
-}
-
 body::before {
     content: '';
     position: absolute;
@@ -107,6 +92,11 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
-    z-index: -1; /* Puts the overlay behind text */
+    background: rgba(0, 0, 0, 0.5); /* Darkens the background */
+    z-index: -1;
+}
+
+section h2, nav ul li a {
+    color: #fff; /* Ensure text is bright */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for readability */
 }
